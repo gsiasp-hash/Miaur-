@@ -145,8 +145,7 @@ main h3 span {
 }
 /* sobre nosotros */
 .sobrenosotros {
-  background: linear-gradient(to bottom, #ff7f50, #9b2710);
-  color: white;
+  color: black;
   margin-top: 20px;
   padding: 100px 0px;
   display: flex;
@@ -177,8 +176,9 @@ main h3 span {
   object-fit: cover;
   filter: grayscale(1);
 }
-.banner3 {
-  display: none;
+.banner img:hover {
+  filter: grayscale(0);
+  transition: all 0.5s ease;
 }
 /* footer */
 
@@ -272,6 +272,17 @@ footer a:hover {
   nav {
     grid-area: nav;
   }
+  nav .home {
+    display: none;
+  }
+  nav .menu {
+    display: none;
+  }
+  .hero {
+    grid-area: header;
+    height: 1000px;
+  }
+
   aside {
     display: block;
     grid-area: aside;
@@ -296,7 +307,7 @@ footer a:hover {
   }
   aside a:hover {
     text-decoration: underline 3px solid black;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
   }
   .galeria {
     grid-template-columns: repeat(3, 1fr);
@@ -311,8 +322,45 @@ footer a:hover {
   .banner3 {
     display: block;
   }
+  footer p {
+    max-width: 500px;
+  }
 }
 @media (min-width: 1024px) {
+  .hero {
+    height: 1200px;
+  }
+  .hero h2 {
+    font-size: 24px;
+  }
+  .hero button {
+    width: 200px;
+    font-size: 16px;
+  }
+  main h3 {
+    font-size: 24px;
+  }
+  .galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer {
+    height: 400px;
+  }
 }
 @media (min-width: 1440px) {
+  .galeria {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .hero {
+    height: 100vh;
+    background-size: initial;
+    background-repeat: repeat;
+  }
+  .hero h2 {
+    font-size: 32px;
+  }
+  .hero button {
+    width: 200px;
+    font-size: 14px;
+  }
 }
